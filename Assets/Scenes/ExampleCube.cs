@@ -1,12 +1,16 @@
 using UnityEngine;
 
 [ExecuteAlways]
-public class Example : MonoBehaviour
+public class ExampleCube : MonoBehaviour, IPooledObject
 {
     public float MoveValue;
     public float Speed;
     public float Radius;
 
+    public void OnSpawn()
+    {
+        Radius += 0.1f;
+    }
 
     void Update()
     {
